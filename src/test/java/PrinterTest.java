@@ -44,4 +44,10 @@ public class PrinterTest {
         assertEquals(100, printer.getTonerVolume());
     }
 
+    @Test
+    public void changeForNewToner() {
+        printer.changeToner();
+        assertEquals(100, printer.getTonerVolume() );
+    }
+
 }

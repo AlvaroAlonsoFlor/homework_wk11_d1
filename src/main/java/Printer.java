@@ -31,4 +31,8 @@ public class Printer {
     public void refill(int numberOfSheets) {
         this.sheets += numberOfSheets;
     }
+
+    public void changeToner() {
+        this.tonerVolume = this.initialTonerVolume;
+    }
 }
