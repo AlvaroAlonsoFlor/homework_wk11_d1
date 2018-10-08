@@ -19,7 +19,12 @@ public class PrinterTest {
     public void canPrintPages() {
         printer.printPages(40);
         assertEquals(10, printer.getSheets());
-        //try assert if reduces the toner;
+        assertEquals(60, printer.getTonerVolume());
+    }
+
+    @Test
+    public void givesInfoWhenPrinting() {
+        assertEquals("Not enough sheets or toner to print", printer.printPages(80));
     }
 
     @Test
@@ -30,7 +35,7 @@ public class PrinterTest {
 
     @Test
     public void canRefill() {
-        printer.refill();
+        printer.refill(10);
         assertEquals(60, printer.getSheets());
     }
 
