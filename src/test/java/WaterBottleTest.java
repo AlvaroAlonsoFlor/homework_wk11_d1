@@ -3,9 +3,11 @@ import org.junit.*;
 import static junit.framework.TestCase.assertEquals;
 
 public class WaterBottleTest {
+    WaterBottle waterBottle;
+
     @Before
     public void before() {
-        WaterBottle waterBottle = new WaterBottle();
+        waterBottle = new WaterBottle();
     }
 
     @Test
@@ -29,6 +31,6 @@ public class WaterBottleTest {
     public void fillBottle() {
         waterBottle.empty();
         waterBottle.fill();
-        assertEquals(100, waterBottle.fill());
+        assertEquals(100, waterBottle.getVolume());
     }
 }
